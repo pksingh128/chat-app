@@ -9,7 +9,7 @@
 	--error-color: #d9534f;
 }
   body{
-    height: 93.5vh;
+    height: 100vh;
     background-image: linear-gradient(rgb(202, 198, 198),purple);
 }
 .logo {
@@ -93,9 +93,9 @@ h2{
 
 body {
 	font-family: 'Roboto', sans-serif;
-	font-size: 16px;
-	/* background: var(--light-color); */
-	margin: 20px;
+	font-size: 15px;
+	margin: 10px;
+	overflow-y: hidden;
 }
 
 ul {
@@ -122,7 +122,8 @@ a {
 	max-width: 520px;
 	margin: 80px auto;
 	color: #fff;
-	padding-top: 37px;
+	padding-top: 80px;
+	
 
 }
 
