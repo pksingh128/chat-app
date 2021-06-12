@@ -67,12 +67,14 @@ h2{
 }
 #messageInp{
     width: 80%;
-    border: 2px solid black; 
+     border: 2px solid black;  
     border-radius: 6px;
 	box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.1), 0 4px 6px -2px rgba(0, 0, 0, 0.05);
      height: 36px; 
     font-size: 15px;
 	outline: none;
+	text-align: left;
+	padding-left: 28px;
 }
 .btn{
     cursor: pointer;
@@ -187,3 +189,15 @@ a {
 }
 
 
+.input-icon i{
+	position: absolute;
+}
+.input-icon{
+	width: 100%;
+	margin-bottom: 10px;
+}
+.icon{
+	padding: 10px;
+	min-width: 20px;
+	color: rgb(92, 88, 88);
+}
