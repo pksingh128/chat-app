@@ -19,10 +19,15 @@
 
     <div class="send" ">
     <form action="#" id="send-container" >
-      <input type="text" name="messageInp" id="messageInp" autocomplete="off" placeholder="write a message.." required />
+      <input type="text" name="messageInp" id="messageInp" autocomplete="off" placeholder="  write a message.." required />
       <button class="btn" type="submit">send</button>
     </form>
     </div>
+
+    <header class="chat-header">
+      
+      <a id="leave-btn" class="btn">Leave Room</a>
+    </header>
   
     <script src="https://cdnjs.cloudflare.com/ajax/libs/qs/6.10.1/qs.min.js" integrity="sha512-aTKlYRb1QfU1jlF3k+aS4AqTpnTXci4R79mkdie/bp6Xm51O5O3ESAYhvg6zoicj/PD6VYY0XrYwsWLcvGiKZQ==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
     <script src="/socket.io/socket.io.js"></script>
