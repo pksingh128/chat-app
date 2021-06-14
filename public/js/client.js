@@ -24,6 +24,7 @@ const append = (message, postion) => {
   }
 };
 
+//library to fetch user name
 const { name } = Qs.parse(location.search, {
   ignoreQueryPrefix: true,
 });
