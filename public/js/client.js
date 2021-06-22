@@ -24,6 +24,7 @@ const append = (message, postion) => {
   }
 };
 
+//library to fetch user name
 const { name } = Qs.parse(location.search, {
   ignoreQueryPrefix: true,
 });
@@ -76,6 +77,7 @@ document.getElementById('leave-btn').addEventListener('click', () => {
   }
 });
 
+
 let timerId = null
 function debounce(func, timer) {
     if(timerId) {
@@ -86,8 +88,8 @@ function debounce(func, timer) {
     }, timer)
 }
 let typingDiv = document.querySelector('.typing')
-socket.on('typing', (data) => {
-  typingDiv.innerText = `${data.name} is typing...`
+socket.on('typing', (name) => {
+  typingDiv.innerText = `${name} is typing...`
     debounce(function() {
        typingDiv.innerText = ''
       
