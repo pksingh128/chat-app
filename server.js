@@ -45,4 +45,10 @@ io.on('connection', (socket)=>{
         socket.broadcast.emit('left', users[socket.id]);
         delete users[socket.id];
     });
+
+
+socket.on('typing', ({name}) => {
+    name=users[socket.id];
+    socket.broadcast.emit('typing', name);
+})
 })

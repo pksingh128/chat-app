@@ -66,10 +66,6 @@ form.addEventListener("submit", (e) => {
   });
 
 
-  //scroll down
-  function scrollToBottom(){
-    messageContainer.scrollTop = messageContainer.scrollHeight
-  }
 
   //Prompt the user before leave chat room
 document.getElementById('leave-btn').addEventListener('click', () => {
@@ -79,3 +75,36 @@ document.getElementById('leave-btn').addEventListener('click', () => {
   } else {
   }
 });
+
+let timerId = null
+function debounce(func, timer) {
+    if(timerId) {
+        clearTimeout(timerId)
+    }
+    timerId = setTimeout(() => {
+        func()
+    }, timer)
+}
+let typingDiv = document.querySelector('.typing')
+socket.on('typing', (data) => {
+  typingDiv.innerText = `${data.name} is typing...`
+    debounce(function() {
+       typingDiv.innerText = ''
+      
+    }, 1000)
+  
+   
+})
+
+// Event listner on messageinput
+messageInput.addEventListener('keyup', (e) => {
+    socket.emit('typing', {name})
+    
+})
+
+
+
+  //scroll down
+  function scrollToBottom(){
+    messageContainer.scrollTop = messageContainer.scrollHeight
+  }
